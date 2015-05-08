@@ -1,0 +1,637 @@
+<HTML>
+<HEAD>
+<TITLE>VoS Developers' FAQ</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<STYLE TYPE="TEXT/CSS">
+<!--
+body {  font-family: Verdana, Arial, Helvetica, sans-serif; clip:       rect(   )}
+-->
+</STYLE></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" onLoad="window.focus()">
+<TABLE WIDTH="75%" BORDER="0" ALIGN="CENTER" background="../../images/header.gif" BGCOLOR="#FF6600">
+  <TR ALIGN="CENTER"> 
+    <TD><FONT SIZE="+4" COLOR="#FFFFFF">VoS Developers' FAQ</FONT></TD>
+  </TR>
+  <TR ALIGN="CENTER"> 
+    <TD><FONT color="#FFFFFF" SIZE="+2">Frequently Asked Questions<BR>
+      about working on the VoS site</FONT></TD>
+  </TR>
+</TABLE>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><BR>
+  (last revised 
+  <!-- #BeginDate format:Am1 -->July 22, 2004<!-- #EndDate -->) </FONT></DIV>
+<OL>
+  <LI><A href="vos2-FAQ.html#developer_resources">Where are other VoS developer resources?</A></LI>
+  <LI><a href="vos2-FAQ.html#structure">How is VoS structured in its new database environment?</a></LI>
+  <LI><a href="vos2-FAQ.html#basic_instructions">How to Edit VoS? (basic instructions on the 
+    VoS editing interface)</a></LI>
+  <LI><A HREF="vos2-FAQ.html#depth">How &quot;deep&quot; into a site does VoS go to collect 
+    links?</A></LI>
+  <LI><A HREF="vos2-FAQ.html#organization">How are sections for an author or topic commonly 
+    organized?</A></LI>
+  <LI><A HREF="vos2-FAQ.html#stylesheet">What is the citation style for VoS entries?</A></LI>
+  <LI><A href="vos2-FAQ.html#htmltags">What are some useful HTML tags for use in the VoS editing 
+    forms?</A></LI>
+  <LI><A href="vos2-FAQ.html#legacy">How do I consult the &quot;legacy VoS&quot; to rectify 
+    truncated entries?</A></LI>
+  <LI><A href="vos2-FAQ.html#worklog">How do I record my developer's work in the VoS worklog?</A></LI>
+</OL>
+<hr>
+<P><A NAME="developer_resources" id="developer_resources"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+  <FONT SIZE="+2" COLOR="#FF0000">1. Where are other VoS developer resources?</FONT><FONT SIZE="+2"> 
+  </FONT></P>
+<P>The VoS Developers' Resource home page is at: <A href="../index.asp.html">http://vos.ucsb.edu/developers/index.asp</A>. 
+  It includes the following resources:</P>
+<TABLE width="90%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#999999">
+  <TR> 
+    <TD> <TABLE width="100%" border="0" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF">
+        <TR> 
+          <TD><TABLE width="100%" border="0" align="center" cellpadding="6">
+              <TR valign="top" bgcolor="#CCCCCC"> 
+                <TD width="25%"><FONT size="5">Resource</FONT></TD>
+                <TD colspan="3"><FONT size="5">URL</FONT></TD>
+              </TR>
+              <TR valign="top"> 
+                <TD> <A href="../../index.asp.html"><FONT size="4">VoS</FONT></A></TD>
+                <TD colspan="3"><A href="../../index.asp.html">http://vos.ucsb.edu/</A></TD>
+              </TR>
+              <TR valign="top"> 
+                <TD><FONT size="4"><A href="../../help.asp.html">VoS Users' FAQ</A></FONT></TD>
+                <TD colspan="3"><A href="../../help.asp.html">http://vos.ucsb.edu/help.asp</A></TD>
+              </TR>
+              <TR valign="top"> 
+                <TD><FONT size="4"><A href="vos2-FAQ.html">VoS Developer's FAQ</A></FONT></TD>
+                <TD colspan="3"><A href="vos2-FAQ.html">http://vos.ucsb.edu/developers/documentation/vos2-FAQ.html</A></TD>
+              </TR>
+              <TR valign="top"> 
+                <TD><FONT size="4"><A href="vos2-FAQ.html#stylesheet">VoS Citation 
+                  Style</A></FONT></TD>
+                <TD colspan="3"><A href="vos2-FAQ.html#stylesheet">http://vos.ucsb.edu/developers/documentation/vos2-FAQ.html#stylesheet</A></TD>
+              </TR>
+              <TR valign="top"> 
+                <TD><FONT size="4"><A href="http://www.english.ucsb.edu/faculty/ayliu/locked/VoS_Original/index.html">Legacy 
+                  VoS</A> </FONT>(archival copy of original VoS for use in correcting 
+                  truncated entries)</TD>
+                <TD colspan="3"><A href="http://www.english.ucsb.edu/faculty/ayliu/locked/VoS_Original/index.html">http://www.english.ucsb.edu/faculty/ayliu/locked/VoS_Original/index.html</A> 
+                  (requires &quot;scribe&quot; username login; password available 
+                  from Alan)</TD>
+              </TR>
+              <TR valign="top"> 
+                <TD><FONT size="4"><A href="http://www.english.ucsb.edu/faculty/ayliu/taskteams/VoS2/login.asp">Developers' 
+                  Work Log</A></FONT></TD>
+                <TD colspan="3"><A href="http://www.english.ucsb.edu/faculty/ayliu/taskteams/VoS2/login.asp">http://www.english.ucsb.edu/faculty/ayliu/taskteams/VoS2/login.asp</A> 
+                  (requires your MyVoS login; available from Alan)</TD>
+              </TR>
+              <TR valign="top"> 
+                <TD>&nbsp;</TD>
+                <TD><FONT size="4">&nbsp;</FONT></TD>
+                <TD><FONT size="4">&nbsp;</FONT></TD>
+                <TD><FONT size="4">&nbsp;</FONT></TD>
+              </TR>
+            </TABLE></TD>
+        </TR>
+      </TABLE></TD>
+  </TR>
+</TABLE>
+<BR>
+<HR>
+<P><A NAME="structure" id="structure"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+  <FONT SIZE="+2" COLOR="#FF0000">2. How is VoS structured in its new database 
+  environment?</FONT></P>
+<P>In Fall 2001, VoS was converted from a static Web site into a dynamic database-to-Web 
+  system. Instead of editing static HTML pages in Dreamweaver (or another Web-authoring 
+  program), VoS developers now log on to the &quot;MyVoS&quot; part of the site 
+  and use Web forms to enter or revise information in the underlying SQL Server 
+  database. The database then takes care of selecting, organizing, and outputting 
+  information requested by the end user (who navigates with links or uses the 
+  &quot;search&quot; function) on an &quot;on-the-fly&quot; basis.</P>
+<P>The dynamic structure of VoS means that while the main &quot;disciplines&quot; 
+  and &quot;resources&quot; on the <a href="../../index.html">VoS home page</a> 
+  are fixed, there is no fixed substructure analogous to a static HTML page and 
+  its equally static subpages. In the old, static VoS, for example, the home page 
+  (index.html) would have a first-level subpage like English Literature (english.html), 
+  which in turn might have second-level subpages underneath it. But in the new, 
+  dynamic VoS, clicking on <a href="../../browse.asp%3Fid=3.html">&quot;Literature 
+  (in English&quot;)</a> will open a universal template page called &quot;browse.asp&quot; 
+  whose URL also contains an instruction at the end like &quot;?id=3.&quot; (The 
+  full URL of the English literature page is thus &quot;http://vos.ucsb.edu/browse.asp?id=3&quot;) 
+  This tells the database to pull out of its stockpile of information a certain 
+  &quot;category&quot; (the English lit category) and output it in the browse.asp 
+  template. Every category has a specific id number, and categories can contain 
+  any number of other categories and information items within them. Clicking on 
+  a category like <a href="../../browse.asp%3Fid=1812.html">&quot;Metapages&quot;</a> 
+  within the category of English Literature simply instructs the database to reuse 
+  the browse.asp template with a new id number.</P>
+<P><a name="drill_down"></a>The result is that a user can &quot;drill down&quot; 
+  to as specific a category as s/he desires--all the way down to a category devoted 
+  to pages from a specific site, for example--and have that category show up on 
+  its own VoS page. For example, on the <a href="../../browse.asp%3Fid=3.html">English 
+  Literature page</a> the user can click on <a href="../../browse.asp%3Fid=1812.html">&quot;Metapages&quot;</a> 
+  to isolate just that category on its own page. Then the user can click within 
+  the Metapages category on <a href="../../browse.asp%3Fid=125.html">&quot;About.com 
+  Literature Pages&quot;</a> to isolate just the About.com sites on their own 
+  page. In this example, the &quot;About.com Literature Pages&quot; category currently 
+  has no other categories within it, only information items.</P>
+<P>Understanding the principle of drilling down to the specific category one wishes 
+  to work on (to add information items to, to reorder items, to move or copy items) 
+  is important in editing VoS.</P>
+<hr>
+<P><A NAME="basic_instructions" id="basic_instructions"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+  <FONT SIZE="+2" COLOR="#FF0000">3. How to edit VoS? (basic instructions on the 
+  VoS editing interface)</FONT></P>
+<P>The following is a quick-start guide to the editing interface:</P>
+<OL type="A">
+  <li><b>Login:</b> Go to <a href="../../index.html">VoS</a> and click on the 
+    link labeled &quot;MyVoS&quot; near the top of the screen. On the login screen 
+    that appears, enter your user Name and Password.<br>
+    <br>
+  </li>
+  <li><b>Initial MyVoS Editing Screen:</b> After you have successfully logged 
+    in, you will see the initial MyVoS editing screen as follows:<br>
+    <br>
+    <a href="images/MyVoS_Editing_Screen.GIF"><img src="images/MyVoS_Editing_Screen_small.GIF" alt="Initial MyVoS Editing Screen" width="240" height="185" border="1" align="absmiddle"></a> 
+    <font size="-2">(click for larger image)<br>
+    </font><br>
+  </li>
+  <li><b>Choose between editing the main VoS site or one of the VoS subprojects:</b> 
+    The initial MyVos editing screen is the gateway to editing VoS or VoS subprojects. 
+    Choose the function you wish as follows (you will only be allowed to edit 
+    resources for which you have the appropriate permissions):<br>
+    <br>
+    <ul>
+      <li>To edit the main VoS site, choose one of the functions under &quot;Editing&quot; 
+        (usually &quot;Edit&quot;). This will present you with a screen that is 
+        an editor's interactive version of the VoS site as it appears to the end 
+        user. This screen allows the editor to browse to specific parts of the 
+        site to work on.<br>
+        <br>
+        <a href="images/Edit_Text_Screen_for_VoS.GIF"><img src="images/Edit_Text_Screen_for_VoS_small.GIF" alt="Edit Text Screen for VoS" width="240" height="150" border="1"></a> 
+        <br>
+        <br>
+      </li>
+      <li>To edit one of the subprojects, choose<a href="http://vos.ucsb.edu/browse-edit.asp?id=2920"> 
+        &quot;EMC&quot;</a> or <a href="http://vos.ucsb.edu/browse-edit.asp?id=3203">&quot;UCSB 
+        English Department Knowledge Base.&quot;</a> (Note: editors may have permissions 
+        only for some subprojects.) The following, for example, is the initial 
+        edit text screen for the Dept. Knowledge Base. This screen shows an editor's 
+        interactive version of the part of the main VoS site devoted to the subproject. 
+        <br>
+        <br>
+        <a href="images/Edit_Text_Screen_for_Dept_Knowledge_Base.GIF"><img src="images/Edit_Text_Screen_for_Dept_Knowledge_Base_small.GIF" alt="Edit Text Screen for Dept. Knowledge Base" width="240" height="151" border="1"></a><br>
+        <br>
+        From the end-user's perspective, different subprojects appear on different 
+        parts of the main VoS site; and they can also be seen on their own isolated 
+        page by drilling down just to that category (<a href="vos2-FAQ.html#drill_down">see 
+        above</a>). On the main VoS site, for example, the Dept. Knowledge Base 
+        is a category located as follows: <a href="../../browse.asp%3Fid=2732.html">Teaching 
+        Resources</a> &gt; <a href="../../browse.asp%3Fid=1197.html">General 
+        Teaching Resources</a> &gt; <a href="../../browse.asp%3Fid=3203.html">UCSB 
+        English Department Knowledge Base</a>. <br>
+        <br>
+      </li>
+    </ul>
+  </li>
+  <li><b>Adding/Revising Categories and Information Items:</b> <br>
+    <br>
+    <ul>
+      <li><a href="vos2-FAQ.html#drill_down">Drill down</a> within the editing interface to 
+        the category within which you wish to work (i.e., isolate that category 
+        on its own VoS page). For example, if you want to add a category or information 
+        item within the &quot;Test Category&quot; of the Dept. Knowledge Base, 
+        first go in the editing interface to the Knowledge Base and then click 
+        on &quot;Test Category&quot; to isolate that category on its own editing 
+        screen.<br>
+        <br>
+        <a href="images/Edit_Text_Screen_for_a_Category.GIF"><img src="images/Edit_Text_Screen_for_a_Category_small.GIF" alt="Edit Text Screen for a Category" width="240" height="149" border="1"></a> 
+        <br>
+        <br>
+      </li>
+      <li>For most editing purposes, you will be using the &quot;Edit&quot; as 
+        opposed to &quot;Order&quot; mode (selectable at the top-right of the 
+        editing screen). Within the Edit mode, you can choose one of the following 
+        functions:<br>
+        <br>
+        --<b>Edit Category</b> This allows you to change the name of the category 
+        you are working within.<br>
+        <br>
+        --<b>Add Category</b> This allows you to add a category <i>within</i> 
+        the category you are working within. Generally, add a category only if 
+        you expect to be adding multiple information items or links within that 
+        category [use the &quot;Order by&quot; field to alphabetize the category 
+        as you wish, usually with the first letters of the category title] [check 
+        the &quot;Depth Flag&quot; field if you want the user to have to click 
+        on a category before seeing its contents; otherwise in most circumstances 
+        the contents of a category will show along with the category name. This 
+        option allows editors to control how deep or flat the contents of a page 
+        with many subcategories will be as it appears to the end user.] <br>
+        <br>
+        --<b>Add Info</b> This allows you to use the following screen to add information 
+        items (i.e., links) to VoS:<br>
+        <br>
+        <a href="images/Add_Info_Screen.GIF"><img src="images/Add_Info_Screen_small.GIF" alt="Add Info Screen" width="240" height="150" border="1"></a> 
+        <br>
+        <br>
+        For the VoS Stylesheet on the order, formatting, attribution, and other 
+        details of links, <a href="vos2-FAQ.html#stylesheet">see below</a>. The main fields 
+        in this Web form are as follows:<br>
+        <br>
+        *<u> Preliminary Details</u>: Use for author name and institutional affiliation 
+        for links that have the equivalent of a print author (e.g., &quot;Jane 
+        Doe (U. Florida)&quot;)<br>
+        <br>
+        * <u>Title of Site or Category Being Added</u>: Title of Link (this is 
+        the text that will have the actual link within it). If you are adding 
+        the home page of a site from which you expect to gather multiple links 
+        within a category named for that site, title the home page &quot;Home 
+        Page of [name of site]&quot; and not just &quot;home page.&quot; (This 
+        is because the &quot;random URL&quot; feature on the VoS home page is 
+        liable otherwise to pick out sites cryptically labeled only &quot;home 
+        page&quot;; it also makes searching on sites difficult.) Thus, for example, 
+        you might set up a category for &quot;About.com&quot;, then include a 
+        number of links, the first of which would be &quot;Homepage of About.com&quot;<br>
+        <br>
+        *<u>Details About Site or Category if Needed</u>: Insert here information 
+        about the site editor, annotation about the site, and other relevant details 
+        as needed--all within parentheses. (See <a href="vos2-FAQ.html#stylesheet">Stylesheet</a> 
+        for more on annotating sites) <br>
+        <br>
+        * <u>Default Order</u>: This field allows editors to control the order 
+        of links within a category. For example, use &quot;0&quot; for the home 
+        page of a site to be sure it appears at the top of a category; use the 
+        first letters of a link for alphabetical order; use &quot;ZZ&quot; to 
+        be sure a link appears at the bottom. There are other ways you can improvise 
+        to order links inside a category.<br>
+        <br>
+        *<u>Vetted</u>: It is important to check this box. Otherwise, the link 
+        you just added will appear only to editors and not to end-users on the 
+        VoS site. (This feature was created because the public can sign up to 
+        add links to VoS, but the links are kept &quot;unvetted&quot; until an 
+        editor has screened them and modified them as needed.)<br>
+        <br>
+      </li>
+      <li>To revise an already existing link, just cleck on that link in the edit 
+        text mode, and the previously entered link information will appear, ready 
+        for revision.<br>
+        <br>
+      </li>
+    </ul>
+  </li>
+  <li><b>Moving/Copying Categories and Information Items:</b><br>
+    <br>
+    Ideally, editors would never enter categories or links redundantly in VoS. 
+    Instead, the principle is that there should be just one database entry for 
+    a specific piece of information, and then the database should be instructed 
+    to <i>present</i> that information in multiple or different locations on VoS 
+    as needed. Rather than moving or copying actual information in the database, 
+    in other words, editors are doing the equivalent of placing a &quot;shortcut&quot; 
+    or &quot;pointer&quot; on their computer desktop--i.e., a pointer to the actual 
+    location of a resource.<br>
+    <br>
+    The placement and copying of such pointers is handled automatically by the 
+    Edit mode when a piece of information is first created. To move the location 
+    of a category or link in VoS after the fact, or to duplicate a category or 
+    link in another location in VoS, use the &quot;Order&quot; mode. This presents 
+    the editor with a screen such as the following:<br>
+    <br>
+    <a href="images/Edit_Order_Screen.GIF"><img src="images/Edit_Order_Screen_small.GIF" alt="Edit Order Screen" width="240" height="147" border="1"></a> 
+    <br>
+    <br>
+    There are three functions you can invoke from this screen:<br>
+    <br>
+    --<u>Reorder</u>: This allows an editor to revise the alphanumeric string 
+    used to customize the order of a link within a category. You can manipuate 
+    the Order string in an item to make a list of items appear in the order you 
+    wish. For example, you can assign a string of &quot;0&quot; to make an item 
+    appear at the top of a group of related items, and strings of &quot;a1,&quot; 
+    &quot;b1,&quot; etc., to make subordinate items appear where appropriate (<A href="vos2-FAQ.html#example_ordering">see 
+    example below</A>). <br>
+    <br>
+    --<u>Select</u>: This is the powerful function in the Edit Order mode. &quot;Selecting&quot; 
+    a category or link tells the system that you want it to pay attention to this 
+    particular item because you are about to move or copy its location on VoS. 
+    After you select an item, you will see the &quot;Place Selection screen&quot; 
+    as follows:<br>
+    <br>
+    <a href="images/Place_Selection_Screen.GIF"><img src="images/Place_Selection_Screen_small.GIF" alt="Pace Selection Screen" width="240" height="146" border="1"></a> 
+    <br>
+    <br>
+    Click on the link on this page titled &quot;Place Selection.&quot; At that 
+    point, you will be returned to the editor's browsing environment. Browse to 
+    the exact category in VoS <i>within</i> which you want to either move or copy 
+    your selection. So, for example, browsing to &quot;Architecture&quot; (i.e., 
+    drilling down to isolate Architecture on its own VoS page in the editing interface) 
+    will allow you to move or copy the selection into the Architecture category 
+    at the top level of that category (along with any existing categories at the 
+    top level within Architecture). If you wish to move or copy your selection 
+    to a location within a sugcategory in Architecture like &quot;General Resources,&quot; 
+    first drill down to that subcategory first.<br>
+    <br>
+    When you are at the proper location, choose &quot;Move&quot; or &quot;Copy&quot; 
+    to execute the maneuver (you'll be prompted for a confirmation).<br>
+    <br>
+    You can move or copy entire categories. For example, the &quot;Science Fiction&quot; 
+    category with any subcategories and all information items can be duplicated 
+    under Science, Technology and Culture, under Literature, etc.<BR>
+    <BR>
+    --<A name="remove"></A><u>Remove</u>: This function allows you to remove the 
+    current instance of an information item without deleting the item from the 
+    database (where it may appear in other locations in VoS as well). (If you 
+    are sure you want to delete the item from the database entirely, use the Delete 
+    function in the Edit mode (<A href="vos2-FAQ.html#delete">see below</A>).) [Note: Currently, 
+    the Remove function is not implemented for information items. It should be 
+    working shortly.]<br>
+    <br>
+  </li>
+  <li><A name="delete"></A><b>Deleting categories and links:</b><br>
+    Partly because of safety, the process of deleting information is a bit awkward 
+    in VoS. While in the Edit mode, the &quot;delete&quot; button next to a link 
+    will delete an individual link item. However, the delete button will not delete 
+    a category item containing links or other categories within it unless you 
+    first drill into that category and delete the materials there individually. 
+    Note that deleting an item or category removes it entirely from the database 
+    (and thus all instances of the item or category, which may appear in multiple 
+    locations in VoS.) To remove only the current instance of an item while leaving 
+    the underlying item in the database (and at other locations in VoS), use the 
+    &quot;Remove&quot; function (<A href="vos2-FAQ.html#remove">see above</A>).</li>
+</OL>
+<hr>
+<P><A NAME="depth"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+  <FONT SIZE="+2" COLOR="#FF0000">4. How &quot;deep&quot; into a site does VoS 
+  go to collect links?</FONT><FONT SIZE="+2"> </FONT></P>
+<P>VoS is conservative in collecting subpages or sections within a site. Usually 
+  the user is best served with just a link to the home page of the site plus, 
+  where appropriate, a brief descriptive annotation. In the case of important 
+  or large sites, however, VoS sometimes collects links not just to the home page 
+  but to the main top-level pages. These latter links are presented in a subordinate 
+  list under the main link. Alternatively, VoS may harvest only selected resources. 
+  For example:</P>
+<UL>
+  <LI><A name="example_ordering"></A>[Category] Shameless Scribblers (set of pages 
+    with brief bios of women authors writing in English, mostly from the 18th 
+    and 19th centuries; the bios are from the 1911 <I>Encyclopedia Brittanica</I>) 
+    (The Write Page) 
+    <UL>
+      <LI><a href="http://www.writepage.com/others">Homepage of Shameless Scribblers</a></LI>
+      <LI><A HREF="http://www.writepage.com/others/wwpbios.htm">Shameless Scribblers</A></LI>
+      <LI><A HREF="http://www.writepage.com/others/wwpbios2.htm">More Shameless 
+        Scribblers</A></LI>
+      <LI><A HREF="http://www.writepage.com/others/wwpbios3.htm">Shameless Scribblers: 
+        Part III</A></LI>
+      <LI><A HREF="http://www.writepage.com/others/unknown5.htm">Reformers, Missionaries 
+        and Do-gooders</A></LI>
+      <LI><A HREF="http://www.writepage.com/others/unknown4.htm">Diplomats, Diarists 
+        and Gossips</A></LI>
+    </UL>
+  </LI>
+</UL>
+<P>You can manipuate the Order string in an item to make a list of items appear 
+  in the order you wish. For example, you can assign a string of &quot;a0&quot; 
+  to make an item appear at the top, and strings of &quot;a1,&quot; &quot;b1,&quot; 
+  etc., to make subordinate items appear where appropriate. <BR>
+  <BR>
+  In general, however, be careful not to over-collect links from a site because 
+  this leads to problems maintaining VoS in the future. Sites often change their 
+  structure. </P>
+<HR>
+<P><A NAME="organization"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+  <FONT SIZE="+2" COLOR="#FF0000">5. How are sections for an author or topic commonly 
+  organized?</FONT><FONT SIZE="+2"> </FONT></P>
+<P>Generally, VoS follows the principle of putting general resources for an author 
+  or topic near the top of a listing, more specific resources (e.g., links to 
+  essays or books) further down, and critical works at the bottom. Where there 
+  are few links for an author or topic, there is no need for formal organization 
+  of the links. But where there are many links or where it otherwise seems to 
+  make sense, Vos uses variants of the following organizational scheme (note the 
+  use of subordinate lists and boldfaced section headings):</P>
+<UL>
+  <LI>Author 
+    <UL>
+      <LI><B>General Resources</B> </LI>
+      <UL>
+        <LI><A HREF="http://www.usafa.af.mil/dfeng/craneres.htm">Links</A></LI>
+      </UL>
+      <LI><B>Poetry</B></LI>
+      <LI><B>Prose</B></LI>
+      <LI><B>Criticism</B><A HREF="http://www.vt.edu/vt98/academics/books/crane/blue_hotel"> 
+        </A></LI>
+    </UL>
+  </LI>
+</UL>
+<P>Usually, the lists are consistent on any particular page, so just look around 
+  to see what to do in a particular instance.</P>
+<HR>
+<P><A NAME="stylesheet"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+  <FONT SIZE="+2" COLOR="#FF0000">6. What is the citation style for VoS entries?</FONT><FONT SIZE="+2"> 
+  </FONT></P>
+<P>VoS has followed a consistent, simplified citation style over the years, with 
+  variants. The main principle is that VoS is not a print bibliography that requires 
+  full citations but a functioning hypertext guide that adds only enough information 
+  to allow users to see at a glance the gist of a link, its author or source, 
+  and (usually through institutional affiliation) its rough level of &quot;authority.&quot; 
+  For the latter purpose, institutions but not departments or ranks are included 
+  (because otherwise it becomes impossible to keep VoS up to date)--though sometimes 
+  it is appropriate to mention department or rank in the description of a link 
+  (e.g., &quot;an undergraduate journal&quot;).</P>
+<P ALIGN="LEFT">The VoS citation style can be seen in the following examples: 
+</P>
+<UL>
+  <LI><B>Meta-Site, Text Archive, or other Large-Scale site: </B>
+<UL>
+      <LI><A HREF="http://www.lib.ucdavis.edu/English/BWRP/index.htm">British 
+        Women Romantic Poets, 1789-1832: An Electronic Collection of Texts from 
+        the Shields Library, U. California, Davis</A> (&quot;highly accurate and 
+        reliable electronic editions of works&quot; encoded in SGML/TEI; with 
+        HTML versions) (Gen. Ed., Nancy Kushigian, UC Davis)</LI>
+      <LI><A HREF="../../index.html">Voice of the Shuttle: Web Page for Humanities 
+        Research</A> (extensive collection of humanitles-related links organized 
+        by discipline; includes coverage of areas such as cultural studies or 
+        science-technology and culture where the humanities currently engage other 
+        fields of knowledge) (Alan Liu, U. California, Santa Barbara)</LI>
+    </UL>
+  </LI>
+  <LI><B>Web page (home pages for authors or topics that are not essays, books, 
+    etc.): </B> 
+    <UL>
+      <LI><A HREF="http://lang.nagoya-u.ac.jp/~matsuoka/19th-authors.html">19th 
+        Century British and Irish Authors</A> (Mitsuharu Matsuoka, Nagoya U., 
+        Japan)</LI>
+      <LI><A HREF="http://athena.english.vt.edu/~brinlee/TIMELINE.HTML">A 19th 
+        Century British Timeline</A> (Robert Brinley, Virginia Tech U.)</LI>
+    </UL>
+  </LI>
+  <LI><B>Online essays, books, etc. (i.e., works with a clear print analogue, 
+    even if an essay is organized as a hypertext construct): </B> 
+    <UL>
+      <LI>David M. Baulch (U. Washington), <A HREF="http://users.ox.ac.uk/~scat0385/sublime.html">&quot;The 
+        Sublime of the Bible&quot; (1996)</A> (<I>Romanticism on the Net</I>)</LI>
+      <LI>Thomas Pfau, <A HREF="http://www.rc.umd.edu/praxis/conspiracy/pfau/pfau2.html">&quot;Bringing 
+        About the Past: Prophetic Memory in Kant, Godwin, and Blake&quot; (1996)</A> 
+        (Romantic Circles)</LI>
+    </UL>
+  </LI>
+  <LI><B>Journal </B> 
+    <UL>
+      <LI><A HREF="http://users.ox.ac.uk/~scat0385/clbulletin.html"><I>The Charles 
+        Lamb Bulletin</I></A> (info and contents)</LI>
+      <LI><A HREF="http://users.ox.ac.uk/~scat0385/clarej.html"><I>John Clare 
+        Society Journal</I></A></LI>
+      <LI><A HREF="http://www.luc.edu/publications/keats-shelley/ksjweb.htm"><I>Keats-Shelley 
+        Journal</I></A></LI>
+      <LI><A HREF="http://www.inform.umd.edu/RC/TEMP/praxis.html"><I>Romantic 
+        Praxis: Theory and Practice</I></A> (original critical essays collected 
+        around various topics) (Orrin N.C. Wang &amp; John Morillo / Romantic 
+        Circles)</LI>
+    </UL>
+  </LI>
+  <LI><B>Course </B> 
+    <UL>
+      <LI>On a VoS page or section devoted to courses: 
+        <UL>
+          <LI>Jack Lynch (U. Penn), <A HREF="http://www.english.upenn.edu/~jlynch/Courses/9/syllabus.html">From 
+            Epic to Hypertext</A></LI>
+        </UL>
+      </LI>
+      <LI>On other VoS pages: 
+        <UL>
+          <LI>(Course) Jack Lynch (U. Penn), <A HREF="http://www.english.upenn.edu/~jlynch/Courses/9/syllabus.html">From 
+            Epic to Hypertext</A> (add whether undergraduate or graduate if known)</LI>
+        </UL>
+      </LI>
+    </UL>
+  </LI>
+</UL>
+<P ALIGN="LEFT"><B><FONT SIZE="+1">Note these issues:</FONT></B></P>
+<OL type="A">
+  <LI><B>Author Designation (Content-Author vs. Web-Author):</B> Content-authors 
+    (e.g., authors of essays) come before the link to the site; Web-authors (the 
+    individuals, journals, or Web sites) responsible for the Web site are named 
+    after the link. Where the content-author is also the Web-author (e.g., someone 
+    who writes and essay and puts it on his or her home page), only the content-author 
+    is mentioned. Web pages that do not have print analogues (e.g., VoS itself) 
+    have only a Web-author. Multiple authors may be listed. Where the authorship 
+    is some kind of collaborative venture, use a slash &quot;/&quot; (e.g., U. 
+    Penn. / U. Virginia). Where a link is from a large site, it is sometimes best 
+    to cite the name of the site as the author rather than the individual responsible 
+    for the site (e.g., &quot;The Write Page&quot;). </LI>
+  <LI><B>Institutional Affiliation:</B> Use these conventions: Delaware U., U. 
+    of Tennessee, Bowdoin C. Where the institution is unlikely to be recognized, 
+    add some geography (e.g., Abnormal C., Trenton, NJ). Assume that users may 
+    be from other parts of the world and may not recognize common U.S. acronyms 
+    for institutions (so use &quot;U. California, Santa Barbara,&quot; not &quot;UCSB&quot;). 
+    Omit institutional affiliations in cases where there are three or more authors.</LI>
+  <LI><B>Link Titles:</B> Cite the title as you find it on the site and use normal 
+    conventions (quotes, italics, etc.) to indicate the genre of the resource 
+    (Web pages without a print analogue appear in normal text). Use your judgment 
+    about including full or long titles, which can sometimes add descriptive value 
+    (e.g., &quot;<I>Apple: the Journal Devoted to Theory of Fruit</I>&quot;). 
+    <B>Date:</B> Note the inclusion of year of publication (if known) in parentheses 
+    within the link-title of essays, books, etc.</LI>
+  <LI><B>Descriptions:</B> Where it is clear what a resource is (by its title 
+    or placement in a particular section of VoS), no description is needed. Often, 
+    for example, resources such as the following require no description: &quot;John 
+    Donne page,&quot; &quot;<I>Keats-Shelley Journal</I>&quot;. Otherwise, it 
+    is useful to add a concise description--perhaps compounded from brief quotations 
+    from the site supplemented by other matter. For example: (&quot;highly accurate 
+    and reliable electronic editions of works&quot; encoded in SGML/TEI; with 
+    HTML versions). Descriptions are included in parentheses; and semi-colons 
+    are preferred to periods. Normally, VoS removes upper-case at the beginning 
+    of a quoted sentence. VoS does not normally include evaluative language in 
+    a description (e.g., &quot;good,&quot; superb,&quot; &quot;brilliant,&quot; 
+    etc.). Instead, VoS uses descriptive or analytical language to achieve the 
+    same effect (e.g., mentions of what a site includes, use of such words as 
+    &quot;extensive,&quot; &quot;well-organized,&quot; &quot;annotated,&quot; 
+    etc.) 
+    <P></P>
+    <HR>
+    <P><A NAME="HTMLtags" id="HTMLtags"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+      <FONT SIZE="+2" COLOR="#FF0000">7. What are some useful HTML tags for use 
+      in the VoS editing forms?</FONT><FONT SIZE="+2"> </FONT></P>
+    <P>The following are some of the HTML tags that may be entered in the editing 
+      forms for VoS or the Developers' Task Log to produce formatting effects:</P>
+  </LI>
+</OL>
+<UL>
+  <LI><B>Highlighting Text</B> (useful in both VoS and the Developers' Task Log)<BR>
+    To create italics, bold, underline, put these tags around text as follows 
+    (note that the end-tag is preceded by a backslash). VoS itself uses italics 
+    but not bold or underline:<BR>
+    <BR>
+    <UL>
+      <LI>&lt;i&gt;<I>Example of italic text</I>&lt;/i&gt; </LI>
+      <LI> &lt;b&gt;<B>Example of bold text</B>&lt;b&gt; </LI>
+      <LI> &lt;u&gt;<u>Example of underlined text</u>&lt;/u&gt; <BR>
+        <BR>
+      </LI>
+    </UL>
+  </LI>
+  <LI><B>Adding a Hypertext Link</B> (useful in both VoS and the Developers' Task 
+    Log)<BR>
+    The HTML for a link is as follows (where, in this example, &quot;Voice of 
+    the Shuttle&quot; is the visible text for the link):<BR>
+    <BR>
+    <UL>
+      <LI>&lt;a href=&quot;http://vos.ucsb.edu/&quot;&gt;<A href="../../index.html">Voice 
+        of the Shuttle</A>&lt;/a&gt; </LI>
+    </UL>
+  </LI>
+</UL>
+<BLOCKQUOTE> 
+  <P> _______________________________________________________________<BR>
+    For more on HTML, see the NCSA's <A href="http://archive.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimerP1.html">&quot;Beginner's 
+    Guide to HTML&quot;:<BR>
+    &lt;http://archive.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimerP1.html&gt;</A></P>
+  <P>&nbsp;</P>
+  <HR>
+  <P><A NAME="legacy" id="legacy"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+    <FONT SIZE="+2" COLOR="#FF0000">8. How do I consult the &quot;legacy VoS&quot; 
+    to rectify truncated entries?</FONT><FONT SIZE="+2"> </FONT></P>
+  <P><A href="http://www.english.ucsb.edu/faculty/ayliu/locked/VoS_Original/index.html"><IMG src="../../images/help/screenshot-of-old-VoS.jpg" alt="Original VoS Site" width="200" height="175" hspace="10" border="0" align="left"></A>When 
+    VoS was migrated in 2001 from its form as a static Web site to a database, 
+    the automated process that facilated the migration truncated all text in the 
+    &quot;details&quot; field of the Add Info form to a certain number of characters. 
+    This is why you will occasionally see an item in VoS in which the descriptive 
+    annotation suddenly cuts off in mid word. If you wish to find the original 
+    VoS annotation for the site, go to the legacy site at: <A href="http://www.english.ucsb.edu/faculty/ayliu/locked/VoS_Original/index.html">http://www.english.ucsb.edu/faculty/ayliu/locked/VoS_Original/index.html</A> 
+    (You will need a login available from Alan).<br clear="all">
+  </P>
+  <P>&nbsp;</P>
+  <HR>
+  <P><A NAME="worklog" id="worklog"></A><IMG SRC="../../images/favicon-base.gif" alt="*" NAME="image1" WIDTH="32" HEIGHT="32"> 
+    <FONT SIZE="+2" COLOR="#FF0000">9. How do I record my developer's work in 
+    the VoS worklog?</FONT><FONT SIZE="+2"> </FONT></P>
+  <P><A href="images/tasklog.jpg"><IMG src="images/tasklog_small.jpg" alt="VoS Task Log Entry Form" width="240" height="170" hspace="10" border="0" align="right"></A>After 
+    an editing session, VoS developers should go to the <A href="http://www.english.ucsb.edu/faculty/ayliu/taskteams/VoS2/login.asp">Developers 
+    Task Log</A>, login, and enter the date, the number of hours spent on the 
+    session, and a brief description of the task (e.g., &quot;I concentrated today 
+    on fixing links on the English Literature: Modern page at http://vos.ucsb.edu/browse.asp?id=2747.&quot; 
+    Where appropriate, include links to the main areas in which you have been 
+    working (for the convenience of Alan in reviewing work on the site).<BR clear="all">
+  </P>
+  <HR>
+</BLOCKQUOTE>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+<P ALIGN="LEFT">&nbsp;</P>
+</BODY>
+</HTML>
